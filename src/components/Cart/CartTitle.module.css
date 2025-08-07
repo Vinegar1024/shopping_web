@@ -1,0 +1,35 @@
+.title {
+  background-color: var(--color-gray-700);
+  border-radius: 6px 6px 0 0;
+  margin-top: 1rem;
+}
+
+.title h4 {
+  width: 60px;
+}
+
+.rightBorder {
+  border-right: 1px solid var(--color-gray-900);
+}
+
+.title div {
+  display: flex;
+}
+
+.first {
+  width: 50%;
+}
+
+.common {
+  width: 20%;
+}
+
+.last {
+  width: 60px;
+  margin: auto 1rem auto 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}

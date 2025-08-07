@@ -1,0 +1,8 @@
+.search input {
+  width: 50%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
