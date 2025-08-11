@@ -14,7 +14,7 @@ const ProductItem = (props) => {
   function handleChnage(type, newValue) {
     if (type === "price") setPrice(newValue);
     else if (type === "quantity") setQty(newValue);
-    else if (type === "visible") setVisibility(newValue);
+    else if (type === "visibility") setVisibility(newValue);
 
     dispatch(cartActions.updateItem({ type, id, newValue }));
   }
@@ -60,7 +60,7 @@ const ProductItem = (props) => {
                     name="visible-switch"
                     checked={visible}
                     onChange={(event) =>
-                      handleChnage("visible", event.target.checked)
+                      handleChnage("visibility", event.target.checked)
                     }
                   />
                   <span className={classes.slider}></span>

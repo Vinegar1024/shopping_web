@@ -20,7 +20,6 @@ const cartSlice = createSlice({
       // state.change = true;
     },
     replaceCart(state, action) {
-      // console.log(action.payload.items)
       state.totalQuantity = action.payload.totalQuantity;
       state.items = action.payload.items;
     },
@@ -75,7 +74,6 @@ const cartSlice = createSlice({
       } else {
         existingItem.quantity++;
         existingItemInCart.quantity--;
-        console.log(state.totalPrice);
         state.totalPrice -= +price;
       }
       state.items[modifyIndex] = existingItem;

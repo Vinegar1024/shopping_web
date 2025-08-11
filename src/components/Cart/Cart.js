@@ -15,6 +15,7 @@ const Cart = (props) => {
   const products = useSelector((state) => state.cart);
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
+  const searchTerm = useSelector((stae) => stae.cart.searchTerm);
 
   let items = [
     ...products.items.filter((item) => item.visibility && item.quantity > 0),
@@ -26,6 +27,12 @@ const Cart = (props) => {
 
   if (items.length === 0 && cartItems.length === 0)
     return <Message>Loading...</Message>;
+
+  if (searchTerm.length > 0) {
+    items = products.items.filter((item) => {
+      return item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+  }
 
   return (
     <>
